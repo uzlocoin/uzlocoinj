@@ -1,6 +1,6 @@
-### Welcome to pivxj
+### Welcome to Uzlocoinj
 
-The pivxj library is a Java implementation of the PIVX protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of PIVX Core. It comes with full documentation and some example apps showing how to use it.
+The pivxj library is a Java implementation of the UZLOCOIN protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of UZLOCOIN Core. It comes with full documentation and some example apps showing how to use it.
 
 ### Technologies
 
