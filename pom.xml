@@ -1,42 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ Copyright by the original author or authors.
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~    http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.dashj</groupId>
-  <artifactId>dashj-parent</artifactId>
-  <version>0.18-SNAPSHOT</version>
+  <groupId>org.uzlocoinj</groupId>
+  <artifactId>uzlocoinj-parent</artifactId>
+  <version>0.14.4-12.1</version>
   <packaging>pom</packaging>
 
   <modules>
-    <module>bls</module>
     <module>core</module>
     <module>examples</module>
     <module>tools</module>
     <module>wallettemplate</module>
   </modules>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
 
   <scm>
@@ -45,9 +27,9 @@
     <url>scm:git:https://github.com/bitcoinj/darkcoinj</url>
   </scm>
 
-  <name>dashj Parent</name>
-  <description>Provides the common configuration for the dashj modules</description>
-  <url>http://dash.org/dashj/</url>
+  <name>uzlocoinj Parent</name>
+  <description>Provides the common configuration for the uzlocoinj modules</description>
+  <url>https://uzlocoin.io/uzlocoinj/</url>
 
   <licenses>
     <license>
@@ -70,19 +52,15 @@
     </mailingList>
   </mailingLists>
 
+  <!--
   <distributionManagement>
-
     <repository>
-      <id>ossrh-dash</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>bintray-pivx-Pivxj</id>
+      <name>dash-Pivxj</name>
+      <url>https://api.bintray.com/maven/dash/Dashj/org.dashj/;publish=1</url>
     </repository>
-
-    <snapshotRepository>
-      <id>ossrh-dash</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
-
   </distributionManagement>
+  -->
 
   <!-- Common build plugin configuration -->
   <build>
@@ -101,28 +79,17 @@
     </plugins>
     <pluginManagement>
       <plugins>
-          <plugin>
-              <groupId>org.sonatype.plugins</groupId>
-              <artifactId>nexus-staging-maven-plugin</artifactId>
-              <version>1.6.7</version>
-              <extensions>true</extensions>
-              <configuration>
-                  <serverId>ossrh-dash</serverId>
-                  <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                  <autoReleaseAfterClose>true</autoReleaseAfterClose>
-              </configuration>
-          </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>2.6.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
+          <version>3.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>2.10</version>
         </plugin>
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
@@ -130,7 +97,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M1</version>
+          <version>1.4</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -138,27 +105,27 @@
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>2.6</version>
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>2.10.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>2.7</version>
         </plugin>
         <plugin>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>2.3</version>
         </plugin>
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.7</version>
+          <version>3.4</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>2.4</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -167,7 +134,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>2.19.1</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -177,7 +144,7 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.7.28</version>
+        <version>1.7.20</version>
       </dependency>
       <!-- dashj consumers are expected to provide their own SLF4J adapters
     such as logback, slf4j-log4j12, slf4j-jcl and so on
@@ -185,7 +152,7 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-jdk14</artifactId>
-        <version>1.7.28</version>
+        <version>1.7.20</version>
         <scope>runtime</scope>
         <optional>true</optional>
       </dependency>
@@ -212,7 +179,7 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
             <configuration>
-              <additionalOptions>-Xdoclint:none</additionalOptions>
+              <additionalparam>-Xdoclint:none</additionalparam>
             </configuration>
           </plugin>
         </plugins>
